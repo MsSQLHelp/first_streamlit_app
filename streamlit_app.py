@@ -22,11 +22,10 @@ def get_fruityvice_data(this_fruit_choice):
    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
    return fruityvice_normalized
-
- def get_fruit_load_list():
-     with my_cur = my_cnx.cursor()
-           my_cur.execute("SELECT * FROM fruit_load_list")
-           return my_cur.fetchall()
+def get_fruit_load_list():
+   with my_cur = my_cnx.cursor()
+        my_cur.execute("SELECT * FROM fruit_load_list")
+        return my_cur.fetchall()
    
 streamlit.header("Fruityvice Fruit Advice!")
 try:
