@@ -28,7 +28,7 @@ def get_fruit_load_list():
         my_cur.execute("SELECT * FROM fruit_load_list")
         return my_cur.fetchall()
 
-def insert_row_snowflake(new_fruit)
+def insert_row_snowflake(new_fruit):
    with my_cnx.cursor() as my_cur:
         my_cur.execute("Insert into fruit_load_list values ('from streamlit')")
         return "Thanks for adding " + new_fruit
